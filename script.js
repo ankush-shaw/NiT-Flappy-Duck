@@ -37,14 +37,15 @@ const PIPE_GAP = isMobile ? 320 : 280; // Vertical gap: Wider on mobile
 const MOBILE_SPAWN_MULTIPLIER = 1.2; // 20% more horizontal distance on mobile
 
 // Progressive difficulty settings
-const BASE_PIPE_SPEED = 1.0;
-const MAX_PIPE_SPEED = 2.5;
-const SPEED_INCREMENT = 0.05;
+const BASE_PIPE_SPEED = 1.8; // Increased from 1.0
+const MAX_PIPE_SPEED = 4.0;  // Increased from 2.5
+const SPEED_INCREMENT = 0.08;
 
 // Spacing: Increase horizontal distance for mobile
-const BASE_SPAWN_RATE = isMobile ? 2400 : 2000; // Slower spawn rate = more distance
-const MIN_SPAWN_RATE = isMobile ? 1500 : 1200;
-const SPAWN_RATE_DECREMENT = 40;
+// Adjusted spawn rates for faster speed (speed * time = distance)
+const BASE_SPAWN_RATE = isMobile ? 1800 : 1500;
+const MIN_SPAWN_RATE = isMobile ? 1000 : 800;
+const SPAWN_RATE_DECREMENT = 30;
 
 canvas.width = CANVAS_WIDTH;
 canvas.height = CANVAS_HEIGHT;

@@ -43,8 +43,8 @@ const SPEED_INCREMENT = 0.08;
 
 // Spacing: Increase horizontal distance for mobile
 // Adjusted spawn rates again for the new higher speed
-const BASE_SPAWN_RATE = isMobile ? 1500 : 1300;
-const MIN_SPAWN_RATE = isMobile ? 900 : 700;
+const BASE_SPAWN_RATE = isMobile ? 2200 : 1300; // Increased spawn time for mobile = More distance
+const MIN_SPAWN_RATE = isMobile ? 1200 : 700;
 const SPAWN_RATE_DECREMENT = 25;
 
 canvas.width = CANVAS_WIDTH;

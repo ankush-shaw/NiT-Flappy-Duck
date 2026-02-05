@@ -16,7 +16,7 @@ const bgImg = document.getElementById('bg-img');
 const pipeImg = document.getElementById('pipe-img');
 
 // Sound assets
-const jumpSound = new Audio('./assets/jump sound.mp3');
+const jumpSound = new Audio('./assets/anime-ahh.mp3');
 const deathSound = new Audio('./assets/faaaa.mp3');
 const bgMusic = new Audio('./assets/bcg.mp3');
 bgMusic.loop = true;
@@ -33,19 +33,19 @@ const PIPE_WIDTH = 60;
 const isMobile = window.innerWidth <= 600;
 
 // On mobile, we increase the gap and spacing to make it playable
-const PIPE_GAP = isMobile ? 320 : 280; // Vertical gap: Wider on mobile
+const PIPE_GAP = isMobile ? 240 : 180; // Significantly reduced vertical gap (Harder!)
 const MOBILE_SPAWN_MULTIPLIER = 1.2; // 20% more horizontal distance on mobile
 
 // Progressive difficulty settings
-const BASE_PIPE_SPEED = 1.8; // Increased from 1.0
-const MAX_PIPE_SPEED = 4.0;  // Increased from 2.5
+const BASE_PIPE_SPEED = 2.2; // Increased again (Even faster!)
+const MAX_PIPE_SPEED = 4.5;  // Higher max speed
 const SPEED_INCREMENT = 0.08;
 
 // Spacing: Increase horizontal distance for mobile
-// Adjusted spawn rates for faster speed (speed * time = distance)
-const BASE_SPAWN_RATE = isMobile ? 1800 : 1500;
-const MIN_SPAWN_RATE = isMobile ? 1000 : 800;
-const SPAWN_RATE_DECREMENT = 30;
+// Adjusted spawn rates again for the new higher speed
+const BASE_SPAWN_RATE = isMobile ? 1500 : 1300;
+const MIN_SPAWN_RATE = isMobile ? 900 : 700;
+const SPAWN_RATE_DECREMENT = 25;
 
 canvas.width = CANVAS_WIDTH;
 canvas.height = CANVAS_HEIGHT;

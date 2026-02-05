@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Flappy Bird Premium</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+
+        <div id="ui-layer">
+            <div id="start-screen" class="glass-panel">
+                <div class="menu-icon">🦆</div>
+                <div class="author-tag">Made by Ankush Shaw</div>
+                <h1>Flappy Duck</h1>
+                <div class="high-score-container">
+                    <span class="label">Best Score</span>
+                    <span id="start-best-score">0</span>
+                </div>
+                <div class="control-hints">
+                    <div class="hint"><span>⌨️</span> SPACE</div>
+                    <div class="hint"><span>🖱️</span> CLICK</div>
+                    <div class="hint"><span>📱</span> TOUCH</div>
+                </div>
+                <button id="start-button">Start Playing</button>
+            </div>
+
+            <div id="game-over-screen" class="glass-panel hidden">
+                <h2>Game Over</h2>
+                <div class="score-container">
+                    <p>Score: <span id="final-score">0</span></p>
+                    <p>Best: <span id="best-score">0</span></p>
+                </div>
+                <button id="restart-button">Try Again</button>
+            </div>
+
+            <div id="hud" class="hidden">
+                <div id="current-score">0</div>
+                <div id="hud-best-score">Best: 0</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden image elements for Canvas -->
+    <img id="bird-img" src="./assets/bird.png?v=2" style="display:none;">
+    <img id="bg-img" src="./assets/background.jpeg?v=3" style="display:none;">
+    <img id="pipe-img" src="./assets/pipe.png" style="display:none;">
+
+    <script src="script.js"></script>
+</body>
+
+</html>

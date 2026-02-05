@@ -28,15 +28,23 @@ const CANVAS_HEIGHT = 800;
 const GRAVITY = 0.1;
 const JUMP = -3.5;
 const PIPE_WIDTH = 60;
-const PIPE_GAP = 280;
 
-// Progressive difficulty settings (like Chrome dino game)
-const BASE_PIPE_SPEED = 1.0; // Starting speed (slower)
-const MAX_PIPE_SPEED = 2.5; // Maximum speed
-const SPEED_INCREMENT = 0.05; // Speed increase per point
-const BASE_SPAWN_RATE = 2000; // Starting spawn rate (slower)
-const MIN_SPAWN_RATE = 1200; // Fastest spawn rate
-const SPAWN_RATE_DECREMENT = 40; // Decrease spawn time per point
+// Dynamic constants based on device
+const isMobile = window.innerWidth <= 600;
+
+// On mobile, we increase the gap and spacing to make it playable
+const PIPE_GAP = isMobile ? 320 : 280; // Vertical gap: Wider on mobile
+const MOBILE_SPAWN_MULTIPLIER = 1.2; // 20% more horizontal distance on mobile
+
+// Progressive difficulty settings
+const BASE_PIPE_SPEED = 1.0;
+const MAX_PIPE_SPEED = 2.5;
+const SPEED_INCREMENT = 0.05;
+
+// Spacing: Increase horizontal distance for mobile
+const BASE_SPAWN_RATE = isMobile ? 2400 : 2000; // Slower spawn rate = more distance
+const MIN_SPAWN_RATE = isMobile ? 1500 : 1200;
+const SPAWN_RATE_DECREMENT = 40;
 
 canvas.width = CANVAS_WIDTH;
 canvas.height = CANVAS_HEIGHT;
